@@ -1,0 +1,1 @@
+"{\"player1\" : {\"name\" : \"Soy Unmbre nuevo\", \"score\" : \"20\", \"logo\" : \"0\"},\r\n\"player2\" : {\"name\" : \"Soy Un nombre nuevo\", \"score\" : \"20\", \"logo\" : \"0\"}\r\n}

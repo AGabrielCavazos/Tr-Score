@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous">
+    </script>
+    
+
+    <script>
+    let x = 0;
+    function explode(){
+        readTextFile("http://localhost/PruebasXsplit/pruebas.json", function(text){
+        var data = JSON.parse(text);
+        $("#cont").val(data.player1.name);
+        //alert(data.player1.name);
+        });
+        setTimeout(explode, 5000);
+      }
+    setTimeout(explode, 5000);
+
+
+
+      function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }else{
+            $("#cont").val(file);
+        }
+    }
+    rawFile.send(null);
+}
+
+//usage:
+    readTextFile("http://localhost/PruebasXsplit/pruebas.json", function(text){
+        var data = JSON.parse(text);
+       $("#cont").val(data.player1.name);
+    });
+    </script>
+</head>
+<body>
+    <h1>hola mundo</h1>
+    <h1>hola mundo</h1>
+    <input type="text" name="cont" id="cont">
+    <h1>hola mundo</h1>
+    <h1>hola mundo</h1>
+    <h1>hola mundo</h1>
+
+</body>
+</html>
