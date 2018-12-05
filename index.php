@@ -16,7 +16,7 @@
 <body>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
     <a class="navbar-brand" href="#"><img src="img/Page/LogoTrLow.png" alt="" sizes="" srcset=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,10 +26,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="?pag=ControlEditor">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Ver Pagina Stream</a>
+          <a class="nav-link" href="Score.html">Ver Pagina Stream</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -56,12 +56,14 @@
   include 'content/editor.php'; 
   else{
     switch ($_GET["pag"]) {
-        case 'Controlador':
-            # code...
+        case 'ControlEditor':
+        include 'content/editor.php'; 
         break;
         
+
+
         default:
-            include 'content/editor.php'; 
+           // include 'content/editor.php'; 
         break;
     }
   }
@@ -69,7 +71,7 @@
 
 
   <!-- Footer -->
-  <footer class="page-footer font-small bg-dark pt-4">
+  <footer class="page-footer font-small bg-secondary pt-4">
 
     <!-- Footer Elements -->
     <div class="container">
@@ -112,6 +114,12 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+
+  <script>
+
+
+  </script>
+
   <!-- <script src="js/index.js"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/index.css">

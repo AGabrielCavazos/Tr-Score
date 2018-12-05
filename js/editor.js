@@ -15,7 +15,7 @@ function readTextFile(file, callback) {
 }
 
 //usage:
-readTextFile("http://localhost/PruebasXsplit/pruebas.json", function (text) {
+readTextFile("http://localhost/Tr-Score/pruebas.json", function (text) {
     data = JSON.parse(text);
 
     console.log(data);

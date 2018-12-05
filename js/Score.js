@@ -1,6 +1,6 @@
 let x = 0;
 function explode(){
-    readTextFile("http://localhost/PruebasXsplit/pruebas.json", function(text){
+    readTextFile("http://localhost/Tr-Score/pruebas.json", function(text){
     var data = JSON.parse(text);
     $("#cont").val(data.player1.name);
     //alert(data.player1.name);
@@ -26,7 +26,7 @@ rawFile.send(null);
 }
 
 //usage:
-readTextFile("http://localhost/PruebasXsplit/pruebas.json", function(text){
+readTextFile("http://localhost/Tr-Score/pruebas.json", function(text){
     var data = JSON.parse(text);
    $("#cont").val(data.player1.name);
 });
